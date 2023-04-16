@@ -1,4 +1,6 @@
-require("update-electron-app")();
+import updateElectronApp from "update-electron-app";
+
+updateElectronApp();
 
 const { menubar } = require("menubar");
 
@@ -18,7 +20,6 @@ const image = nativeImage.createFromPath(
 );
 
 app.on("ready", () => {
-
   const tray = new Tray(image);
 
   const mb = menubar({
@@ -41,7 +42,6 @@ app.on("ready", () => {
 
   mb.on("ready", () => {
     const { window } = mb;
-
 
     if (process.platform !== "darwin") {
       window.setSkipTaskbar(true);
@@ -86,7 +86,7 @@ app.on("ready", () => {
         click: () => {
           shell.openExternal("https://github.com/sw-yx/chatgpt-mac");
         },
-      }
+      },
     ];
 
     tray.on("right-click", () => {
