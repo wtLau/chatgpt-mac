@@ -1,6 +1,4 @@
-import updateElectronApp from "update-electron-app";
-
-updateElectronApp();
+require("update-electron-app")();
 
 const { menubar } = require("menubar");
 
@@ -74,6 +72,7 @@ app.on("ready", () => {
       },
       {
         label: "Open in browser",
+        accelerator: "Command+Shift+A",
         click: () => {
           shell.openExternal("https://chat.openai.com/chat");
         },
@@ -83,8 +82,9 @@ app.on("ready", () => {
       },
       {
         label: "View on GitHub",
+        accelerator: "Command+Shift+S",
         click: () => {
-          shell.openExternal("https://github.com/sw-yx/chatgpt-mac");
+          shell.openExternal("https://github.com/wtlau/chatgpt-mac");
         },
       },
     ];
