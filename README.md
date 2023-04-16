@@ -1,8 +1,10 @@
 # ChatGPT for desktop
 
-This is a simple app that makes ChatGPT live in your menubar. Forked from <https://github.com/sw-yx/chatgpt-mac>
+This is a simple app that makes ChatGPT live in your menubar.
 
-I'm trying to learn how to to make a electron menubar app with webview from this fork
+Forked from [sw-yx/chatgpt-mac](https://github.com/sw-yx/chatgpt-mac)
+
+Personal learning how to to make a menubar app with webview
 
 <p align="center">
   <img src="./images/screenshot.jpeg" width="500">
@@ -19,7 +21,7 @@ I'm trying to learn how to to make a electron menubar app with webview from this
   - Command+Shift+A -> Open in browser
   - Command+Shift+S -> View On Github
 
-## install
+## Install
 
 No Windows binaries currently offered. Clone the repo, npm install electron-forge and run.
 
