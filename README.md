@@ -32,4 +32,6 @@ This is a fork of <https://github.com/sw-yx/chatgpt-mac>
 
 ## install
 
-<https://github.com/wtlau/chatgpt-mac/releases/tag/vswyx>
+Unfortunately, it seems like the distributed application can not be shared with others unless the app is code-signed (requries apple dev account). I'd suggest you to build this project from source and you'll be able to find the application in `/out/make`.
+
+If you are not sure how to do above step, you could go to original repo [vincelwt/chatgpt-mac](https://github.com/vincelwt/chatgpt-mac) and download from the link provided.
