@@ -1,7 +1,6 @@
 require("update-electron-app")();
 
 const { menubar } = require("menubar");
-const Nucleus = require("nucleus-analytics");
 
 const path = require("path");
 const {
@@ -19,7 +18,6 @@ const image = nativeImage.createFromPath(
 );
 
 app.on("ready", () => {
-  Nucleus.init("638d9ccf4a5ed2dae43ce122");
 
   const tray = new Tray(image);
 
@@ -79,15 +77,9 @@ app.on("ready", () => {
       {
         label: "View on GitHub",
         click: () => {
-          shell.openExternal("https://github.com/vincelwt/chatgpt-mac");
+          shell.openExternal("https://github.com/sw-yx/chatgpt-mac");
         },
-      },
-      {
-        label: "Author on Twitter",
-        click: () => {
-          shell.openExternal("https://twitter.com/vincelwt");
-        },
-      },
+      }
     ];
 
     tray.on("right-click", () => {
