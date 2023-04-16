@@ -4,7 +4,7 @@ module.exports = {
     name: "ChatGPT",
     executableName: "ChatGPT",
     icon: "images/icon",
-    appBundleId: "com.sw-yx.chatgptmac",
+    appBundleId: "com.wtlau.chatgptmac",
     extendInfo: {
       LSUIElement: "true",
     },
@@ -12,14 +12,14 @@ module.exports = {
       hardenedRuntime: false,
       gatekeeperAssess: false,
       identity: "Developer ID Application: Lyser.io Ltd (R4PF6TTR6Z)",
-    }
+    },
   },
   publishers: [
     {
       name: "@electron-forge/publisher-github",
       config: {
         repository: {
-          owner: "sw-yx",
+          owner: "wtlau",
           name: "chatgpt-mac",
         },
         prerelease: true,
