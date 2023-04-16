@@ -66,6 +66,13 @@ app.on("ready", () => {
         },
       },
       {
+        label: "Quick Open",
+        accelerator: "Command+Shift+G",
+        click: () => {
+          window.reload();
+        },
+      },
+      {
         label: "Open in browser",
         click: () => {
           shell.openExternal("https://chat.openai.com/chat");
