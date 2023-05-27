@@ -15,11 +15,12 @@ Personal learning how to to make a menubar app with webview
 - No analytics or tracking
 - Compiled from source for wtlau personal use
 - Shortcut Keys
-  - Cmd+Shift+G -> Quick Open
-  - Command+R -> Reload
-  - Command+Q -> Quit
-  - Command+Shift+A -> Open in browser
+  - Cmd+Shift+G -> Quick Open App
+  - Command+R -> Reload/Clear
+  - Command+Q -> Quit App
+  - Command+Shift+A -> Open Chat in browser
   - Command+Shift+S -> View On Github
+- Dark/light mode toggle based on system peference
 
 ## Install
 

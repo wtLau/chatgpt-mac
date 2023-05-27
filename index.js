@@ -28,7 +28,8 @@ app.on("ready", () => {
         webviewTag: true,
         // nativeWindowOpen: true,
       },
-      width: 450,
+      minWidth: 400,
+      width: 700,
       height: 550,
     },
     tray,
@@ -101,6 +102,7 @@ app.on("ready", () => {
     });
     const menu = new Menu();
 
+    // Open App window
     globalShortcut.register("CommandOrControl+Shift+g", () => {
       if (window.isVisible()) {
         mb.hideWindow();
@@ -112,12 +114,28 @@ app.on("ready", () => {
         mb.app.focus();
       }
     });
+    // Open ChatGPT website
+    globalShortcut.register("CommandOrControl+Shift+A", () => {
+      if (window.isVisible()) {
+        shell.openExternal("https://chat.openai.com/chat");
+      }
+    });
+    // Open this Github repo
+    globalShortcut.register("CommandOrControl+Shift+S", () => {
+      if (window.isVisible()) {
+        shell.openExternal("https://github.com/wtlau/chatgpt-mac");
+      }
+    });
 
     Menu.setApplicationMenu(menu);
+    // Open dev tool if in development mode
+    var isDev = process.env.APP_DEV
+      ? process.env.APP_DEV.trim() == "true"
+      : false;
 
-    // open devtools
-    // window.webContents.openDevTools();
-
+    if (isDev) {
+      window.webContents.openDevTools();
+    }
     console.log("Menubar app is ready.");
   });
 
