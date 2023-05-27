@@ -28,7 +28,8 @@ app.on("ready", () => {
         webviewTag: true,
         // nativeWindowOpen: true,
       },
-      width: 850,
+      minWidth: 400,
+      width: 700,
       height: 550,
     },
     tray,
@@ -101,6 +102,7 @@ app.on("ready", () => {
     });
     const menu = new Menu();
 
+    // Open App window
     globalShortcut.register("CommandOrControl+Shift+g", () => {
       if (window.isVisible()) {
         mb.hideWindow();
